@@ -3,11 +3,10 @@ from django.contrib import admin
 from django.urls import path
 
 # Importando views
-from app.views import todo_list
-from app.views import todo_detail_change_and_delete
+from app.views import TodoListAndCreate, TodoChangeAndDelete
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', todo_list),
-    path('<int:pk>/', todo_detail_change_and_delete),
+    path('', TodoListAndCreate.as_view()),
+    path('<int:pk>/', TodoChangeAndDelete.as_view()),
 ]
