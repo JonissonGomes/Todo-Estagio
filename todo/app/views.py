@@ -1,8 +1,5 @@
 # Importar dependencias
-from rest_framework import generics
-from rest_framework.exceptions import NotFound
-from rest_framework.response import Response
-from rest_framework.views import APIView
+from rest_framework import viewsets
 
 # Importar models
 from app.models import Todo
@@ -10,12 +7,8 @@ from app.models import Todo
 # Importar serializers
 from app.serializers import TodoSerializer
 
-# Criando métodos de requisição(Refatorando AINDA MAIS)
+# Criando métodos de requisição(Refatorando EXTREMAMENTE)
 
-class TodoListAndCreate(generics.ListCreateAPIView):
-    queryset = Todo.objects.all()
-    serializer_class = TodoSerializer
-
-class TodoChangeAndDelete(generics.RetrieveUpdateDestroyAPIView):
+class TodoViewSet(viewsets.ModelViewSet):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
