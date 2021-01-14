@@ -1,7 +1,7 @@
 # Importar dependencias
 from rest_framework import status
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
+from rest_framework.decorators import app_view
 
 # Importar models
 from app.models import Todo
@@ -11,7 +11,7 @@ from app.serializers import TodoSerializer
 
 #Criar função para request GET e POST
 
-@app_view(['GET', 'POST'])
+@app_view(['GET','POST'])
 
 def todo_list(request):
     if request.method == 'GET':
