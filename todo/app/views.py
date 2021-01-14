@@ -3,7 +3,6 @@ from rest_framework import status
 from rest_framework.exceptions import NotFound
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework.decorators import api_view
 
 # Importar models
 from app.models import Todo
@@ -15,11 +14,6 @@ from app.serializers import TodoSerializer
 
 
 class TodoListAndCreate(APIView):
-    def get_object(self, pk):
-        try:
-            return Todo.objects.get(pk=pk)  # Irá buscar as chaves primearias no banco
-        except Todo.DoesNotExist:
-           raise NotFound()
 
     # Método GET
     def get(self, request):
@@ -36,6 +30,19 @@ class TodoListAndCreate(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST) # Retorna Erro na requisição dos dados
 
 class TodoChangeAndDelete(APIView):
+
+    def get_object(self, pk):
+        try:
+            return Todo.objects.get(pk=pk)  # Irá buscar as chaves primearias no banco
+        except Todo.DoesNotExist:
+            raise NotFound()
+
+    # Método GET
+    def get(self, request, pk):
+        todo = self.get_object(pk)  # Retorna todos os objetos a partir da chave primaria
+        serializer = TodoSerializer(todo) # Compila todos os dados do banco em formato Json
+        return Response(serializer.data) # Retorna os dados do banco em formato Json
+    
     # Método PUT
     def put(self, request, pk):
         todo = self.get_object(pk)
