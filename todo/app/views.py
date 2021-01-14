@@ -25,3 +25,26 @@ def todo_list(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED) # Retorna Sucesso no request
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST) # Retorna Erro na requisição dos dados
     
+
+@api_view(['GET','PUT','DELETE'])
+
+def todo_detail_change_and_delete(request, pk):
+    try:
+        todo = Todo.objects.get(pk=pk) # Irá buscar as chaves primearias no banco
+    except Todo.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+    
+    if request.method == 'GET':
+        serializer = TodoSerializer(todo) # Irá armazenar a chave primaria em um objeto JSON
+        return Response(serializer.data) # Irá retornar os dados referentes aos do banco
+    
+    elif request.method == 'PUT':
+        serializer = TodoSerializer(todo, data=request.data)  # Ira armazenar as 2 chaves(1 do banco e outra do request) em formato JSON
+        if serializer.is_valid(): # Comparar os dados para validação
+            serializer.save() # Salva as alterações
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_404_NOT_FOUND) # Retorna mensagem de erro
+    
+    elif request.method == 'DELETE':
+        todo.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
