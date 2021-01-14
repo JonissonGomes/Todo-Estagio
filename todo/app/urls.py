@@ -1,12 +1,8 @@
 # Importando dependencias
+from app.views import TodoViewSet
 from django.contrib import admin
-from django.urls import path
+from rest_framework.routers import DefaultRouter # Já cria todas as rotas necessárias com base nas views
 
-# Importando views
-from app.views import TodoListAndCreate, TodoChangeAndDelete
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', TodoListAndCreate.as_view()),
-    path('<int:pk>/', TodoChangeAndDelete.as_view()),
-]
+router = DefaultRouter()
+router.register('', TodoViewSet)
+urlpatterns = router.urls
