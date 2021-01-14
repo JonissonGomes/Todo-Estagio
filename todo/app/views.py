@@ -22,21 +22,20 @@ class TodoListAndCreate(APIView):
            raise NotFound()
 
     # Método GET
-    def get(self, request, pk):
-        todo = self.get_object(pk)
+    def get(self, request, ):
         todo = Todo.objects.all()  # Retorna todos os objetos do model
         serializer = TodoSerializer(todo, many=True) # Compila todos os dados do banco em formato Json
         return Response(serializer.data) # Retorna os dados do banco em formato Json
 
     # Método POST
-    def post(self, request,pk):
-        todo = self.get_object(pk)
+    def post(self, request,):
         serializer = TodoSerializer(data=request.data)
         if serializer.is_valid(): # Faz a validação dos dados requeridos no request
             serializer.save() # Salva os dados do request
             return Response(serializer.data, status=status.HTTP_201_CREATED) # Retorna Sucesso no request
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST) # Retorna Erro na requisição dos dados
 
+class TodoChangeAndDelete(APIView):
     # Método PUT
     def put(self, request, pk):
         todo = self.get_object(pk)
