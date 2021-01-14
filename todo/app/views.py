@@ -22,13 +22,13 @@ class TodoListAndCreate(APIView):
            raise NotFound()
 
     # Método GET
-    def get(self, request, ):
+    def get(self, request):
         todo = Todo.objects.all()  # Retorna todos os objetos do model
         serializer = TodoSerializer(todo, many=True) # Compila todos os dados do banco em formato Json
         return Response(serializer.data) # Retorna os dados do banco em formato Json
 
     # Método POST
-    def post(self, request,):
+    def post(self, request):
         serializer = TodoSerializer(data=request.data)
         if serializer.is_valid(): # Faz a validação dos dados requeridos no request
             serializer.save() # Salva os dados do request
