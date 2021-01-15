@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Router } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 // Importando as páginas
 import Todo from "./pages/todo/todo"
