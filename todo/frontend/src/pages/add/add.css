@@ -1,0 +1,197 @@
+.btn-close {
+ display: none;
+}
+
+.boxForm {
+  border-radius: 10px;
+  height: 280px;
+  width: 35%;
+  margin-left: 33%;
+  margin-right: 30%;
+  background-color: #262652;
+}
+
+form {
+  width: 1%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 3%;
+  padding-top: 20px;
+}
+
+label {
+  font-size: 11pt;
+}
+
+input[type="text"],
+[type="password"] {
+  height: 30px;
+  width: 27vw;
+  margin-top: 1px;
+  margin-bottom: 1vh;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 4px 2px 4px 10px;
+  color: yellow;
+  background-color: #494991;
+}
+
+input[type="submit"] {
+  margin-top: 5vh;
+  height: 40px;
+  width: 10vw;
+  margin-left: 9vw;
+  padding: 5px 5px 5px 5px;
+  border-radius: 8px;
+  border: none;
+  background-color: yellow;
+  font-size: 16pt;
+  font-weight: 700;
+  color: #494991;
+  transition: 150ms;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(253, 253, 76);
+  cursor: pointer;
+}
+
+.btn-back {
+  margin-top: 5vh;
+  height: 40px;
+  width: 15vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  padding: 5px 5px 5px 5px;
+  border-radius: 8px;
+  border: none;
+  background-color: #272763;
+  font-size: 16pt;
+  font-weight: 700;
+  color: yellow;
+  transition: 200ms;
+  outline: none;
+}
+
+.btn-back:hover {
+  background-color: rgb(253, 253, 76);
+  cursor: pointer;
+  color: #272763;
+}
+
+@media (max-width: 600px) {
+  .btn-close {
+    display: flex;
+    color: yellow;
+    margin-left: 75vw;
+    margin-bottom: 0;
+  }
+
+  .boxForm {
+    border-radius: 10px;
+    height: 290px;
+    width: 90vw;
+    margin: 0;
+    background-color: #262652;
+  }
+
+  form {
+    width: 10vw;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1%;
+    padding-top: 10px;
+  }
+
+  label {
+    font-size: 11pt;
+  }
+
+  input[type="text"],
+  [type="password"] {
+    height: 30px;
+    width: 70vw;
+    margin-top: 20%;
+    margin-bottom: 30%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 4px 2px 4px 10px;
+    color: yellow;
+    background-color: #494991;
+  }
+
+  input[type="submit"] {
+    margin-top: 50%;
+    margin-left: 100%;
+    margin-right: 100%;
+    height: 50px;
+    width: 50vw;
+    padding: 8px 8px 8px 8px;
+    border-radius: 8px;
+    border: none;
+    background-color: yellow;
+    font-size: 18pt;
+    font-weight: 700;
+    color: #262652;
+    margin-bottom: 20%;
+  }
+
+  .btn-back {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .boxForm {
+    border-radius: 10px;
+    height: 270px;
+    width: 90vw;
+    background-color: #262652;
+  }
+
+  form {
+    width: 10vw;
+    margin-top: 1%;
+    padding-top: 10px;
+  }
+
+  label {
+    font-size: 11pt;
+  }
+
+  input[type="text"],
+  [type="password"] {
+    height: 30px;
+    width: 70vw;
+    margin-top: 20%;
+    margin-bottom: 30%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 4px 2px 4px 10px;
+    color: #ffff00;
+    background-color: #494991;
+  }
+
+  input[type="submit"] {
+    margin-top: 50%;
+    margin-left: 100%;
+    margin-right: 100%;
+    height: 50px;
+    width: 50vw;
+    padding: 8px 8px 8px 8px;
+    border-radius: 8px;
+    border: none;
+    background-color: yellow;
+    font-size: 18pt;
+    font-weight: 700;
+    color: #262652;
+    margin-bottom: 20%;
+  }
+
+  .btn-back {
+    display: none;
+  }
+}
