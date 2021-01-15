@@ -242,9 +242,7 @@
     padding: 5px 5px 5px 5px;
     font-size: 7pt;
     height: 50px;
-    width: 80%;
-    margin-left: 3%;
-    margin-right: 3%;
+    width: 50vw;
     border-radius: 5px;
     align-items: center;
     outline: none;
@@ -270,9 +268,7 @@
     padding: 5px 5px 5px 5px;
     font-size: 7pt;
     height: 50px;
-    width: 100%;
-    margin-left: 3%;
-    margin-right: 3%;
+    width: 40vw;
     border-radius: 5px;
     align-items: center;
     outline: none;
@@ -341,9 +337,7 @@
     padding: 5px 5px 5px 5px;
     font-size: 7pt;
     height: 50px;
-    width: 80%;
-    margin-left: 3%;
-    margin-right: 3%;
+    width: 40vw;
     border-radius: 5px;
     align-items: center;
     outline: none;
@@ -369,9 +363,7 @@
     padding: 5px 5px 5px 5px;
     font-size: 7pt;
     height: 50px;
-    width: 100%;
-    margin-left: 3%;
-    margin-right: 3%;
+    width: 44vw;
     border-radius: 5px;
     align-items: center;
     outline: none;
