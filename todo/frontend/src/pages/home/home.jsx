@@ -1,4 +1,8 @@
+// Importando dependências
 import "./home.css";
+import Link from "react-router-dom/Link";
+
+
 // Importando imagens
 import iconCreateTasks from "../../assets/icon-create.svg";
 import iconVisualTasks from "../../assets/icon-visual-task.svg";
@@ -17,15 +21,19 @@ function Home() {
       </p>
 
       <section className="boxButton">
-        <button className="createTaskButton">
-            <img src={iconCreateTasks} alt="Icon-Create-Task"/>
-          <h3> Criar tarefa</h3>
-        </button>
+        <Link to="/add">
+          <button className="createTaskButton">
+            <img src={iconCreateTasks} alt="Icon-Create-Task" />
+            <h3> Criar tarefa</h3>
+          </button>
+        </Link>
 
-        <button className="visualTaskButton">
-            <img src={iconVisualTasks} alt="Icon-Visual-Task"/>
-          <h3>Visualizar tarefas</h3>
-        </button>
+        <Link to="/todo">
+          <button className="visualTaskButton">
+            <img src={iconVisualTasks} alt="Icon-Visual-Task" />
+            <h3>Visualizar tarefas</h3>
+          </button>
+        </Link>
       </section>
     </div>
   );
