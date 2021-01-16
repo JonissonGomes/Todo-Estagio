@@ -5,5 +5,5 @@ class Todo(models.Model):
     stack = models.CharField(max_length=200)
     description = models.CharField(max_length=300)
     time = models.IntegerField()
-    done = models.BooleanField(default=False)
+    done = models.BooleanField()
     create_at = models.DateTimeField(auto_now_add=True)
