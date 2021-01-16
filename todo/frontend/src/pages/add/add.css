@@ -4,7 +4,7 @@
 
 .boxForm {
   border-radius: 10px;
-  height: 280px;
+  height: 300px;
   width: 35%;
   margin-left: 33%;
   margin-right: 30%;
@@ -16,7 +16,7 @@ form {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 3%;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 label {
@@ -37,8 +37,10 @@ input[type="text"],
   background-color: #494991;
 }
 
+
+
 input[type="submit"] {
-  margin-top: 5vh;
+  margin-top: 1px;
   height: 40px;
   width: 10vw;
   margin-left: 9vw;
