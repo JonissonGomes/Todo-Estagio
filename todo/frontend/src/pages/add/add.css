@@ -43,6 +43,7 @@ input[type="number"]{
   width: 27vw;
   margin-top: 1px;
   margin-bottom: 1vh;
+  margin-right: 170px;
   border-radius: 5px;
   border: none;
   outline: none;
@@ -51,6 +52,9 @@ input[type="number"]{
   background-color: #494991;
 }
 
+.boxFlex{
+  display: flex
+}
 
 input[type="submit"] {
   margin-top: 10px;
@@ -130,6 +134,20 @@ input[type="submit"]:hover {
     width: 70vw;
     margin-top: 20%;
     margin-bottom: 30%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 4px 2px 4px 10px;
+    color: yellow;
+    background-color: #494991;
+  }
+
+  input[type="number"]{
+    height: 25px;
+    width: 27vw;
+    margin-top: 1px;
+    margin-bottom: 1vh;
+    margin-right: 110px;
     border-radius: 5px;
     border: none;
     outline: none;

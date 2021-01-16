@@ -90,18 +90,31 @@ function Add() {
             }}
           />
 
-          <label htmlFor="Time">Limite/Tempo</label>
-          <input
-            type="number"
-            maxlength="2"
-            name="time"
-            id="Time"
-            required
-            value={time}
-            onChange={(event) => {
-              setTime(event.target.value);
-            }}
-          />
+            <label htmlFor="Time">Limite/Tempo</label>
+          <section className="boxFlex">
+            <input
+              type="number"
+              maxlength="2"
+              name="time"
+              id="Time"
+              required
+              value={time}
+              onChange={(event) => {
+                setTime(event.target.value);
+              }}
+            />
+
+            <input
+              type="checkbox"
+              maxlength="2"
+              name="done"
+              id="Done"
+              onChange={(event) => {
+                setTime(event.target.value);
+              }}
+            />
+          </section>
+
           <input type="submit" value="Criar" />
         </form>
       </section>
