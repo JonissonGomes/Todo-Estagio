@@ -4,10 +4,11 @@
 
 .boxForm {
   border-radius: 10px;
-  height: 300px;
+  height: 280px;
   width: 35%;
   margin-left: 33%;
   margin-right: 30%;
+  margin-bottom: 2%;
   background-color: #262652;
 }
 
@@ -25,7 +26,20 @@ label {
 
 input[type="text"],
 [type="password"] {
-  height: 30px;
+  height: 25px;
+  width: 27vw;
+  margin-top: 1px;
+  margin-bottom: 1vh;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 4px 2px 4px 10px;
+  color: yellow;
+  background-color: #494991;
+}
+
+input[type="number"]{
+  height: 25px;
   width: 27vw;
   margin-top: 1px;
   margin-bottom: 1vh;
@@ -38,9 +52,8 @@ input[type="text"],
 }
 
 
-
 input[type="submit"] {
-  margin-top: 1px;
+  margin-top: 10px;
   height: 40px;
   width: 10vw;
   margin-left: 9vw;
@@ -60,7 +73,8 @@ input[type="submit"]:hover {
 }
 
 .btn-back {
-  margin-top: 5vh;
+  margin-top: 5px;
+  margin-bottom: 15px;
   height: 40px;
   width: 15vw;
   margin-left: 1vw;
@@ -92,7 +106,7 @@ input[type="submit"]:hover {
 
   .boxForm {
     border-radius: 10px;
-    height: 290px;
+    height: 305px;
     width: 90vw;
     margin: 0;
     background-color: #262652;

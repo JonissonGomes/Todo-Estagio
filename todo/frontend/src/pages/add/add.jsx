@@ -60,6 +60,7 @@ function Add() {
             type="text"
             name="name"
             id="Name"
+            required
             value={name}
             onChange={(event) => {
               setName(event.target.value);

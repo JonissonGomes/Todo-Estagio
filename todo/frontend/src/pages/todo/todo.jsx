@@ -50,6 +50,9 @@ function Todo() {
 
 
       </section>
+      <Link to="/">
+        <button className="btn-back"> Voltar </button>
+      </Link>
     </div>
   );
 }

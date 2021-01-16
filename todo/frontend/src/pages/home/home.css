@@ -1,12 +1,12 @@
 .Container {
-  margin-top: 2%;
+  margin-top: 1%;
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
 }
 
 .Container img {
-  width: 25%;
+  width: 15%;
   margin-bottom: 0;
 }
 
@@ -33,12 +33,12 @@
 
 .boxButton {
   margin-top: 2%;
-  margin-left: 40%;
-  margin-right: 40%;
+  margin-left: 36%;
+  margin-right: 36%;
   justify-content: space-between;
   align-items: center;
   display: flex;
-  width: 40%;
+  width: 50%;
 }
 
 .createTaskButton {
