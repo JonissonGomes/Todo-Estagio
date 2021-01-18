@@ -1,6 +1,6 @@
 # TODO-ESTAGIÁRIO
 
-Esta aplicação é um experimento básico de lista de tarefas, e tem como finalidade 
+Esta aplicação é um experimento básico de lista de tarefas, e tem como finalidade a aplicação dos conceitos de Django Rest Framework e sua integração com React durante a primeira semana do estágio.
 
 
 
