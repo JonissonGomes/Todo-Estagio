@@ -86,9 +86,13 @@ Após estes passos, você pode usar a aplicação para cadastrar e visualizar su
 ### React:
 
 `Axios` - Comunicação entre a API com o front end
+
 `{ BrowserRouter, Switch, Route }` from "react-router-dom " - Criação de rotas
+
 `{ Link }` from "react-router-dom" - Navegação entre rotas
+
 `{ useHistory }` from "react-router-dom" - Acessar o estado de um componente
+
 `{ useState }` from "react" - Atualização de dados em tempo real
 
 
